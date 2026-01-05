@@ -51,7 +51,14 @@
           }
         } catch (error) {
           console.error('Login failed:', error);
-          alert(error.response.data.message);
+          // Handle undefined error.response
+          if (error.response && error.response.data && error.response.data.message) {
+            alert(error.response.data.message);
+          } else if (error.message) {
+            alert(error.message);
+          } else {
+            alert('Login gagal. Periksa koneksi atau pastikan server berjalan.');
+          }
         }
       },
     },

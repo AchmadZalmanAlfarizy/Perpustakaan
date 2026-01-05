@@ -14,7 +14,7 @@ class BookFactory extends Factory
             'author' => $this->faker->name(),
             'publisher' => $this->faker->company(),
             'category_id' => Category::inRandomOrder()->first()?->id ?? Category::factory(),
-            'stock' => $this->faker->numberBetween(1, 20),
+            'stock' => $this->faker->numberBetween(1, 10),
             'book_cover' => $this->faker->imageUrl(),
         ];
     }

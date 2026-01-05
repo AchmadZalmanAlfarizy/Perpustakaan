@@ -26,7 +26,7 @@
       </div>
       <div class="mb-3">
         <label for="stock" class="form-label">Stok</label>
-        <input type="number" class="form-control" id="stock" v-model="book.stock" required min="0">
+        <input type="number" class="form-control" id="stock" v-model="book.stock" required min="1" max="10">
       </div>
       
       <!-- Book Cover Upload -->

@@ -31,7 +31,7 @@ class BookController extends Controller
             'author' => 'required|string|max:255',
             'publisher' => 'required|string|max:255',
             'category_id' => 'required|exists:categories,id',
-            'stock' => 'required|integer|min:0',
+            'stock' => 'required|integer|min:1|max:10',
             'book_cover' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:10240', // 10MB
         ]);
 
@@ -82,7 +82,7 @@ class BookController extends Controller
             'author' => 'required|string|max:255',
             'publisher' => 'required|string|max:255',
             'category_id' => 'required|exists:categories,id',
-            'stock' => 'required|integer|min:0',
+            'stock' => 'required|integer|min:1|max:10',
             'book_cover' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:10240', // 10MB
         ]);
 
